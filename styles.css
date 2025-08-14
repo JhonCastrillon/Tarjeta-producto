@@ -1,0 +1,118 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #edf2f7;
+}
+
+.Titulo-principal {
+    text-align: center;       
+    font-size: 3rem;           
+    font-weight: bold;         
+    color: #870f17;            
+    margin: 40px 0;            
+    font-family: Arial, sans-serif; 
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 5vw;
+    box-sizing: border-box;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.titulo-tarjeta {
+    font-size: 1.4rem; 
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    color: #f8f5f5;
+}
+
+.precio {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #c7c5c5;
+    transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+    .titulo-tarjeta {
+        font-size: 1.8rem; 
+    }
+}
+
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        background-color: rgb(110, 173, 110);
+        color: white;
+    } 
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card {
+        background-color: rgb(56, 49, 250);
+        color: white;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        background-color: rgb(250, 250, 68);
+        color: black;
+    }
+}
